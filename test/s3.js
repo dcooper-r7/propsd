@@ -55,8 +55,8 @@ describe('S3 source plugin', function() {
 
   it('initializes a timer with the set interval', (done) => {
     this.s3.on('update', () => {
-      this.s3._timer.should.have.keys(['_called', '_idleNext', '_idlePrev', '_idleStart', '_idleTimeout',
-        '_onTimeout', '_repeat']);
+      this.s3._timer.should.have.keys('_called', '_idleNext', '_idlePrev', '_idleStart', '_idleTimeout',
+        '_onTimeout', '_repeat');
       done();
     });
 
